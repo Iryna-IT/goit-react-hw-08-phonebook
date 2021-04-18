@@ -1,15 +1,3 @@
-body {
-  margin: 0;
-  line-height: 1.5;
-}
-
-h1,
-h2 {
-  font-size: 34px;
-  font-weight: bold;
-  color: black;
-}
-
 .container {
   margin: 50px auto;
   padding: 20px;
@@ -18,4 +6,14 @@ h2 {
   color: #032444;
   background: lightsteelblue;
   font-size: 18px;
+}
+
+.form {
+  width: 320;
+}
+
+.label {
+  display: 'flex';
+  flex-direction: 'column';
+  margin-bottom: 15;
 }
