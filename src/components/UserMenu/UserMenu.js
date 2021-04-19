@@ -10,10 +10,12 @@ class UserMenu extends Component {
     const { avatar, name, onLogout } = this.props;
     return (
       <div className={styles.container}>
-        <img src={avatar} alt="avatar" width="32" className={styles.avatar} />
-        <span className={styles.name}>Welcome, {name}</span>
-        <button type="button" onClick={onLogout}>
-          Logout
+        <div className={styles.user}>
+          <img src={avatar} alt="avatar" width="32" className={styles.avatar} />
+          <span className={styles.name}>{name}</span>
+        </div>
+        <button className={styles.btn} type="button" onClick={onLogout}>
+          LogOut
         </button>
       </div>
     );
@@ -22,16 +24,18 @@ class UserMenu extends Component {
 
 // const UserMenu = ({ avatar, name, onLogout }) => (
 //   <div className={styles.container}>
+//   <div className={styles.user}>
 //     <img src={avatar} alt="avatar" width="32" className={styles.avatar} />
-//     <span className={styles.name}>Welcome, {name}</span>
-//     <button type="button" onClick={onLogout}>
-//       Logout
-//     </button>
+//     <span className={styles.name}>{name}</span>
 //   </div>
+//   <button className={styles.btn} type="button" onClick={onLogout}>
+//     LogOut
+//   </button>
+// </div>
 // );
 
 const mapStateToProps = state => ({
-  name: authSelectors.getUsername(state),
+  name: authSelectors.getUserEmail(state),
   avatar: defaultAvatar,
 });
 

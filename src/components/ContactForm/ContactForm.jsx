@@ -56,34 +56,34 @@ class ContactForm extends Component {
   render() {
     return (
       <form className={styles.form_contact} onSubmit={this.handleSubmit}>
-        <div>
+        <div className={styles.container_contact}>
           <label htmlFor="name" className={styles.label_contact}>
-            Name
+            <span className={styles.headline_contact}>Name</span>
+            <input
+              type="text"
+              className={styles.input_contact}
+              name="name"
+              value={this.state.name}
+              placeholder="Enter name"
+              onChange={this.handleChange}
+              required
+            ></input>
           </label>
-          <input
-            type="text"
-            className={styles.input_contact}
-            name="name"
-            value={this.state.name}
-            placeholder="Enter name"
-            onChange={this.handleChange}
-            required
-          ></input>
         </div>
-        <div>
+        <div className={styles.container_contact}>
           <label htmlFor="phone" className={styles.label_contact}>
-            Phone
+            <span className={styles.headline_contact}>Phone</span>
+            <input
+              type="tel"
+              className={styles.input_contact}
+              name="number"
+              value={this.state.number}
+              placeholder="Enter phone XXX-XX-XX"
+              pattern="^(\d{3})-\d{2}-\d{2}$"
+              onChange={this.handleChange}
+              required
+            ></input>
           </label>
-          <input
-            type="tel"
-            className={styles.input_contact}
-            name="number"
-            value={this.state.number}
-            placeholder="Enter phone XXX-XX-XX"
-            pattern="^(\d{3})-\d{2}-\d{2}$"
-            onChange={this.handleChange}
-            required
-          ></input>
         </div>
         <button
           type="submit"

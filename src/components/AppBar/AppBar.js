@@ -12,10 +12,9 @@ import styles from './AppBar.module.css';
 class AppBar extends Component {
   render() {
     const { isAuthenticated } = this.props;
-    console.log(isAuthenticated);
     return (
       <header className={styles.header}>
-        <Navigation />
+        {/* <Navigation /> */}
         {isAuthenticated ? <UserMenu /> : <AuthNav />}
       </header>
     );

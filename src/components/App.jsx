@@ -9,6 +9,7 @@ import { authOperations } from '../redux/auth';
 
 import styles from './App.module.css';
 
+const HomeView = lazy(() => import('../views/HomeView'));
 const RegisterView = lazy(() => import('../views/RegisterView'));
 const LoginView = lazy(() => import('../views/LoginView'));
 const ContactsView = lazy(() => import('../views/ContactsView'));
@@ -29,7 +30,7 @@ class App extends Component {
               path="/"
               restricted
               redirectTo="/contacts"
-              component={RegisterView}
+              component={HomeView}
             />
             <PublicRoute
               path="/register"

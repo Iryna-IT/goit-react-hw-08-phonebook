@@ -6,7 +6,7 @@ import styles from '../AppBar/AppBar.module.css';
 class AuthNav extends Component {
   render() {
     return (
-      <div>
+      <div className={styles.container}>
         <NavLink
           to="/register"
           exact
@@ -29,24 +29,24 @@ class AuthNav extends Component {
 }
 
 // const AuthNav= () => (
-//   <div>
-//     <NavLink
-//       to="/register"
-//       exact
-//       className={styles.link}
-//       activeClassName={styles.activeLink}
-//     >
-//       Registration
-//     </NavLink>
-//     <NavLink
-//       to="/login"
-//       exact
-//       className={styles.link}
-//       activeClassName={styles.activeLink}
-//     >
-//       LogIn
-//     </NavLink>
-//   </div>
+//  <div className={styles.container}>
+//    <NavLink
+//      to="/register"
+//      exact
+//      className={styles.link}
+//      activeClassName={styles.activeLink}
+//    >
+//      Registration
+//    </NavLink>
+//    <NavLink
+//      to="/login"
+//      exact
+//      className={styles.link}
+//      activeClassName={styles.activeLink}
+//    >
+//      LogIn
+//    </NavLink>
+//  </div>;
 // );
 
-export default { AuthNav };
+export default AuthNav;

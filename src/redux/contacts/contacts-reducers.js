@@ -31,6 +31,12 @@ const loading = createReducer(false, {
   [deleteContactError]: () => false,
 });
 
-const error = createReducer(null, {});
+const setError = (_, { payload }) => payload;
+
+const error = createReducer(null, {
+  [fetchContactsError]: setError,
+  [addContactError]: setError,
+  [deleteContactError]: setError,
+});
 
 export default { contacts, loading, error };

@@ -27,7 +27,7 @@ class RegisterView extends Component {
     const { name, email, password } = this.state;
 
     return (
-      <div>
+      <div className={styles.container}>
         <h1>Registration Page</h1>
 
         <form
@@ -36,36 +36,45 @@ class RegisterView extends Component {
           autoComplete="off"
         >
           <label className={styles.label}>
-            Name
+            <span className={styles.headline}>Name</span>
             <input
+              className={styles.input}
               type="text"
               name="name"
               value={name}
+              placeholder="Jon Howard"
               onChange={this.handleChange}
             />
           </label>
 
           <label className={styles.label}>
-            email
+            <span className={styles.headline}>email</span>
             <input
+              className={styles.input}
               type="email"
               name="email"
               value={email}
+              placeholder="jhovard@gmail.com"
               onChange={this.handleChange}
             />
           </label>
 
           <label className={styles.label}>
-            login
+            <span className={styles.headline}>login</span>
             <input
+              className={styles.input}
               type="password"
               name="password"
               value={password}
+              pattern=".{7,}"
+              title="Must contain at least 7 or more characters"
               onChange={this.handleChange}
             />
           </label>
 
-          <button type="submit">Register</button>
+          <button type="submit" className={styles.btn}>
+            Sign up
+          </button>
         </form>
       </div>
     );

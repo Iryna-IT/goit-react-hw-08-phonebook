@@ -22,7 +22,7 @@ const fetchContacts = () => async dispatch => {
 
     dispatch(fetchContactsSuccess(data));
   } catch (error) {
-    dispatch(fetchContactsError(error));
+    dispatch(fetchContactsError(error.message));
   }
 };
 
@@ -35,7 +35,7 @@ const addContact = newContact => async dispatch => {
 
     dispatch(addContactSuccess(data));
   } catch (error) {
-    dispatch(addContactError(error));
+    dispatch(addContactError(error.message));
   }
 };
 
@@ -47,7 +47,7 @@ const deleteContact = contactId => async dispatch => {
 
     dispatch(deleteContactSuccess(contactId));
   } catch (error) {
-    dispatch(deleteContactError(error));
+    dispatch(deleteContactError(error.message));
   }
 };
 

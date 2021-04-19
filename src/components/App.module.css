@@ -1,13 +1,14 @@
 body {
   margin: 0;
-  line-height: 1.5;
+  /* line-height: 1.5; */
 }
 
 h1,
 h2 {
+  margin: 20px 0;
   font-size: 34px;
   font-weight: bold;
-  color: black;
+  color: #032444;
 }
 
 .container {
@@ -18,4 +19,12 @@ h2 {
   color: #032444;
   background: lightsteelblue;
   font-size: 18px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
 }

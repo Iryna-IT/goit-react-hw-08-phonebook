@@ -26,7 +26,7 @@ class LoginView extends Component {
     const { email, password } = this.state;
 
     return (
-      <div>
+      <div className={styles.container}>
         <h1>Login page</h1>
 
         <form
@@ -35,8 +35,9 @@ class LoginView extends Component {
           autoComplete="off"
         >
           <label className={styles.label}>
-            email
+            <span className={styles.headline}> email</span>
             <input
+              className={styles.input}
               type="email"
               name="email"
               value={email}
@@ -45,8 +46,9 @@ class LoginView extends Component {
           </label>
 
           <label className={styles.label}>
-            login
+            <span className={styles.headline}> login</span>
             <input
+              className={styles.input}
               type="password"
               name="password"
               value={password}
@@ -54,7 +56,9 @@ class LoginView extends Component {
             />
           </label>
 
-          <button type="submit">Enter</button>
+          <button type="submit" className={styles.btn}>
+            Enter
+          </button>
         </form>
       </div>
     );
