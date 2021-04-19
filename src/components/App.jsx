@@ -26,13 +26,6 @@ class App extends Component {
         <Suspense fallback={<p>Loading...</p>}>
           <Switch>
             <PublicRoute
-              exact
-              path="/"
-              restricted
-              redirectTo="/contacts"
-              component={HomeView}
-            />
-            <PublicRoute
               path="/register"
               restricted
               redirectTo="/contacts"
@@ -48,6 +41,12 @@ class App extends Component {
               path="/contacts"
               redirectTo="/login"
               component={ContactsView}
+            />
+            <PublicRoute
+              path="/"
+              restricted
+              redirectTo="/contacts"
+              component={HomeView}
             />
           </Switch>
         </Suspense>

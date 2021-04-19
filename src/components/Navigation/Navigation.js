@@ -27,21 +27,19 @@ class Navigation extends Component {
 }
 
 // const Navigation = ({ isAuthenticated }) => (
-{
-  /* <nav className={styles.nav}>
-  {isAuthenticated && (
-    <NavLink
-      to="/contacts"
-      exact
-      className={styles.link}
-      activeClassName={styles.activeLink}
-    >
-      Contacts
-    </NavLink>
-  )}
-</nav>; */
-}
-// );
+//  <nav className={styles.nav}>
+//   {isAuthenticated && (
+//     <NavLink
+//       to="/contacts"
+//       exact
+//       className={styles.link}
+//       activeClassName={styles.activeLink}
+//     >
+//       Contacts
+//     </NavLink>
+//   )}
+// </nav>;
+//  );
 
 const mapStateToProps = state => ({
   isAuthenticated: authSelectors.getIsAuthenticated(state),
